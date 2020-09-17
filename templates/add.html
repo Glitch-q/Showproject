@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>ShowProject | Showcase your projects</title>
+    <style>
+        .main-con{
+            /* background-color: aquamarine; */
+            margin-right: auto;
+            margin-left: auto;
+            box-sizing: border-box;
+        }
+        .con-nav{
+            /* background-color: rgb(168, 111, 221); */
+            padding: .75rem 1.25rem;
+            background-color: rgba(0,0,0,.03);
+            margin-right: auto;
+            margin-left: auto;
+            box-sizing: border-box;
+        }
+        .con-nav a{
+            text-decoration: none;
+            color: black;
+        }
+        .con-nav a:hover{
+            text-decoration: underline;
+            color: black;
+        }
+        .lks-ara{
+            padding: .75rem 1.25rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-con">
+        <div class="con-nav">
+            <a href="/">Home</a> |
+            <a href="/search">Search</a>
+        </div>
+        <div class="lks-ara">
+            <form name="addForm" autocomplete="off" id="addForm" method="POST" action="{{ url_for('addpost') }}" novalidate>
+                    <label>Title</label>
+                    <input type="text" class="form-control" placeholder="Title" name="title" id="title" required data-validation-required-message="Please enter a title." required>
+                    <p class="help-block text-danger"></p>
+                    <label>Author</label>
+                    <input type="text" class="form-control" placeholder="Author" name="author" id="author" required data-validation-required-message="Please enter your phone number." required>
+                    <p class="help-block text-danger"></p>
+                    <label>Content</label>
+                    <textarea rows="5" class="form-control" placeholder="content" name="content" id="content" required data-validation-required-message="Please enter a message." required></textarea>
+                    <p class="help-block text-danger"></p>
+                <br>
+                <div id="success"></div>
+                  <button type="submit" class="btn btn-secondary" id="sendMessageButton">Send</button>
+              </form>
+        </div>
+    </div>
+</body>
+</html>
