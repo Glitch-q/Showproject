@@ -44,7 +44,7 @@
             <a href="{{ url_for('post', post_id=post.id) }}">
                 {{ post.title }}
             </a><br>
-            <p class="post-meta">Posted by {{ post.author }}</p>
+            <p class="post-meta">Posted by {{ post.author }} on {{ post.date_posted.strftime('%B %d, %Y') }}</p>
           {% endfor %}
         </div>
     </div>
