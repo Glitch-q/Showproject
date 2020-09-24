@@ -22,7 +22,7 @@ def index():
 
     return render_template('index.html', posts=posts)
 
-@app.route('/admin')
+@app.route('ROUTE HIDDEN')
 def admin():
     posts = Project.query.order_by(Project.date_posted.desc()).all()
 
